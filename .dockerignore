@@ -1,0 +1,52 @@
+# Git / CI
+
+.git
+.gitignore
+.github/
+
+# Python trash
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual Environment
+
+venv/
+.venv/
+env/
+.python-env/
+
+# IDE and local setup
+
+.idea/
+.vscode/
+*.iml
+
+# Builds / Packs
+
+dist/
+build/
+*.egg-info/
+
+# Configs / Secrets
+
+.env
+.env.*
+*.pem
+*.key
+*.crt
+
+# Local Data
+
+pgdata/
+pgdata
+*.log
+logs/
+tmp/

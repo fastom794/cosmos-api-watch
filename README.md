@@ -65,6 +65,9 @@ Service that monitors RPC/REST endpoints for Cosmos ecosystem (Cosmos Hub, Osmos
 ## Run with Docker
 
 ```bash
+git clone https://github.com/fastom794/cosmos-api-watch.git
+cd cosmos-api-watch
+cp env.example .env
 docker compose up -d --build
 
 # API: http://localhost:12081/

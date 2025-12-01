@@ -1,0 +1,383 @@
+projects:
+  - slug: cosmos
+    name: Cosmos Hub
+    networks:
+      - slug: cosmos-hub-mainnet
+        name: Cosmos Hub Mainnet
+        chain_id: cosmoshub-4
+        network_type: mainnet
+        endpoints:
+
+          - name: publicnode.com
+            type: rpc
+            url: https://cosmos-rpc.publicnode.com
+            enabled: true
+
+          - name: blockpi.network
+            type: rpc
+            url: https://cosmos.blockpi.network/v1/rpc/public
+            enabled: true
+
+          - name: itrocket.net
+            type: rpc
+            url: https://cosmoshub-mainnet-rpc.itrocket.net
+            enabled: true
+
+          - name: nodestake.org
+            type: rpc
+            url: https://rpc.cosmos.nodestake.org
+            enabled: true
+
+          - name: polkachu.com
+            type: rpc
+            url: https://cosmos-rpc.polkachu.com
+            enabled: true
+
+          - name: stakely.io
+            type: rpc
+            url: https://cosmoshub-rpc.stakely.io
+            enabled: true
+
+          - name: stakin-nodes.com
+            type: rpc
+            url: https://cosmoshub.rpc.stakin-nodes.com
+            enabled: true
+
+          - name: cosmostation.io
+            type: api
+            url: https://api.cosmoshub.cosmostation.io
+            enabled: true
+
+          - name: nodestake.org
+            type: api
+            url: https://api.cosmos.nodestake.org
+            enabled: true
+
+          - name: polkachu.com
+            type: api
+            url: https://cosmos-api.polkachu.com
+            enabled: true
+
+          - name: publicnode.com
+            type: api
+            url: https://cosmos-rest.publicnode.com
+            enabled: true
+
+          - name: stakin-nodes.com
+            type: api
+            url: https://cosmoshub-lcd.stakin-nodes.com
+            enabled: true
+
+      - slug: cosmos-hub-testnet
+        name: Cosmos Hub Testnet
+        chain_id: theta-testnet-001
+        network_type: testnet
+        endpoints:
+          - name: polypore.xyz
+            type: rpc
+            url: https://rpc.sentry-01.theta-testnet.polypore.xyz
+            enabled: false
+
+  - slug: osmosis
+    name: Osmosis
+    networks:
+      - slug: osmosis-mainnet
+        name: Osmosis Mainnet
+        chain_id: osmosis-1
+        network_type: mainnet
+        endpoints:
+
+          - name: osmosis.zone
+            type: rpc
+            url: https://rpc.osmosis.zone
+            enabled: true
+
+          - name: publicnode.com
+            type: rpc
+            url: https://osmosis-rpc.publicnode.com
+            enabled: true
+
+          - name: itrocket.net
+            type: rpc
+            url: https://osmosis-mainnet-rpc.itrocket.net
+            enabled: true
+
+          - name: osmosis.zone
+            type: api
+            url: https://lcd.osmosis.zone
+            enabled: true
+
+          - name: blockapsis.com
+            type: api
+            url: https://lcd-osmosis.blockapsis.com
+            enabled: false
+
+          - name: publicnode.com
+            type: api
+            url: https://osmosis-rest.publicnode.com
+            enabled: true
+
+      - slug: osmosis-testnet
+        name: Osmosis Testnet
+        chain_id: osmo-test-5
+        network_type: testnet
+        endpoints:
+          - name: osmosis.zone
+            type: rpc
+            url: https://rpc.testnet.osmosis.zone
+            enabled: true
+
+  - slug: juno
+    name: Juno
+    networks:
+      - slug: juno-mainnet
+        name: Juno Mainnet
+        chain_id: juno-1
+        network_type: mainnet
+        endpoints:
+
+          - name: publicnode.com
+            type: rpc
+            url: https://juno-rpc.publicnode.com:443
+            enabled: true
+
+          - name: cogwheel.zone
+            type: rpc
+            url: https://juno-rpc.cogwheel.zone
+            enabled: true
+
+          - name: bluestake.net
+            type: rpc
+            url: https://juno-rpc.bluestake.net:443
+            enabled: true
+
+          - name: stavr.tech
+            type: rpc
+            url: https://juno.rpc.m.stavr.tech
+            enabled: true
+
+          - name: cogwheel.zone
+            type: api
+            url: https://juno-api.cogwheel.zone
+            enabled: true
+
+          - name: bluestake.net
+            type: api
+            url: https://juno-api.bluestake.net
+            enabled: true
+
+          - name: publicnode.com
+            type: api
+            url: https://juno-rest.publicnode.com
+            enabled: true
+
+  - slug: celestia
+    name: Celestia
+    networks:
+      - slug: celestia-mainnet
+        name: Celestia Mainnet
+        chain_id: celestia
+        network_type: mainnet
+        endpoints:
+
+          - name: publicnode.com
+            type: rpc
+            url: https://celestia-rpc.publicnode.com:443
+            enabled: true
+
+          - name: contributiondao.com
+            type: rpc
+            url: https://celestia-rpc.contributiondao.com
+            enabled: true
+
+          - name: imperator.co
+            type: rpc
+            url: https://rpc-celestia.imperator.co/
+            enabled: true
+
+          - name: itrocket.net
+            type: rpc
+            url: https://celestia-mainnet-rpc.itrocket.net/
+            enabled: true
+
+          - name: nodestake.org
+            type: rpc
+            url: https://rpc.celestia.nodestake.org/
+            enabled: true
+
+          - name: polkachu.com
+            type: rpc
+            url: https://celestia-rpc.polkachu.com/
+            enabled: true
+
+          - name: stakely.io
+            type: rpc
+            url: https://celestia-rpc.stakely.io/
+            enabled: true
+
+          - name: stakin.com
+            type: rpc
+            url: https://celestia.rpc.stakin-nodes.com/
+            enabled: true
+
+          - name: pops.one
+            type: rpc
+            url: https://rpc.celestia.pops.one
+            enabled: true
+
+          - name: numia.xyz
+            type: rpc
+            url: https://public-celestia-rpc.numia.xyz
+            enabled: true
+
+          - name: noders.services
+            type: rpc
+            url: https://celestia-rpc.noders.services
+            enabled: true
+
+          # REST / LCD / API
+          - name: publicnode.com
+            type: api
+            url: https://celestia-rest.publicnode.com
+            enabled: true
+
+          - name: pops.one
+            type: api
+            url: https://api.celestia.pops.one
+            enabled: true
+
+          - name: noders.services
+            type: api
+            url: https://celestia-api.noders.services
+            enabled: true
+
+          - name: numia.xyz
+            type: api
+            url: https://public-celestia-lcd.numia.xyz
+            enabled: true
+
+          - name: stakeflow.io
+            type: api
+            url: https://api-celestia-01.stakeflow.io
+            enabled: true
+
+          - name: lunaroasis.net
+            type: api
+            url: https://api.lunaroasis.net
+            enabled: true
+
+  - slug: akash
+    name: Akash Network
+    networks:
+      - slug: akash-mainnet
+        name: Akash Mainnet
+        chain_id: akashnet-2
+        network_type: mainnet
+        endpoints:
+          
+          - name: akashnet.net
+            type: rpc
+            url: https://rpc.akashnet.net:443
+            enabled: true
+          
+          - name: ecostake.com
+            type: rpc
+            url: https://rpc-akash.ecostake.com:443
+            enabled: true
+          
+          - name: polkachu.com
+            type: rpc
+            url: https://akash-rpc.polkachu.com:443
+            enabled: true
+          - name: c29r3.xyz
+            type: rpc
+            url: https://akash.c29r3.xyz:443/rpc
+            enabled: true
+
+          - name: lavenderfive.com
+            type: api
+            url: https://rest.lavenderfive.com:443/akash
+            enabled: true
+          
+          - name: stakewith.us
+            type: api
+            url: https://api.akash.stakewith.us
+            enabled: true
+          
+          - name: ecostake.com
+            type: api
+            url: https://rest-akash.ecostake.com/
+            enabled: true
+
+  - slug: evmos
+    name: Evmos
+    networks:
+      - slug: evmos-mainnet
+        name: Evmos Mainnet
+        chain_id: evmos_9001-2
+        network_type: mainnet
+        endpoints:
+          
+          - name: stakely.io
+            type: rpc
+            url: https://evmos-rpc.stakely.io
+            enabled: true
+          
+          - name: publicnode.com
+            type: rpc
+            url: https://evmos-rpc.publicnode.com:443
+            enabled: true
+          
+          - name: polkachu.com
+            type: rpc
+            url: https://evmos-rpc.polkachu.com/
+            enabled: true
+
+          - name: stakely.io
+            type: api
+            url: https://evmos-lcd.stakely.io
+            enabled: true
+          
+          - name: polkachu.com
+            type: api
+            url: https://evmos-api.polkachu.com
+            enabled: true
+
+  - slug: kava
+    name: Kava
+    networks:
+      - slug: kava-mainnet
+        name: Kava Mainnet
+        chain_id: kava_2222-10
+        network_type: mainnet
+        endpoints:
+          
+          - name: publicnode.com
+            type: rpc
+            url: https://kava-rpc.publicnode.com:443
+            enabled: true
+
+          - name: polkachu.com
+            type: rpc
+            url: https://kava-rpc.polkachu.com
+            enabled: true
+
+          - name: nodestake.org
+            type: rpc
+            url: https://rpc.kava.nodestake.org
+            enabled: true
+
+          - name: publicnode.com
+            type: api
+            url: https://kava-rest.publicnode.com
+            enabled: true
+
+          - name: polkachu.com
+            type: api
+            url: https://kava-api.polkachu.com
+            enabled: true
+
+          - name: nodestake.org
+            type: api
+            url: https://api.kava.nodestake.org
+            enabled: true

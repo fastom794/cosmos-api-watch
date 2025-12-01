@@ -6,6 +6,12 @@
 
 Service that monitors RPC/REST endpoints for Cosmos ecosystem (Cosmos Hub, Osmosis, Celestia, etc.).
 
+## 🌐 Live Demo
+
+Try the live demo: **[cosmos-api-watch.ryzhaevsky.dev](https://cosmos-api-watch.ryzhaevsky.dev/)**
+
+*Real-time monitoring of Cosmos ecosystem RPC/REST endpoints with dashboard*
+
 ## ✨ Features
 
 - 🚀 **FastAPI REST API** + HTML dashboard

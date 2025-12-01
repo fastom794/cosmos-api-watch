@@ -47,6 +47,6 @@ build/
 
 pgdata/
 pgdata
-*.log
-logs/
+*.loglogs/
 tmp/
+

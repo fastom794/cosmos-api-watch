@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 
 from db.session import Base, engine
 from api.deps import get_db
+from core.config import APP_VERSION
 from core.init_data import init_data
 from models import Project, Network, Endpoint, EndpointStatus
 

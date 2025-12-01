@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+psycopg[binary]
+sqlalchemy
+pydantic>=2.0
+pydantic-settings>=2.0
+httpx
+apscheduler
+python-dotenv
+pyyaml
+jinja2

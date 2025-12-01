@@ -62,3 +62,11 @@ Service that monitors RPC/REST endpoints for Cosmos ecosystem (Cosmos Hub, Osmos
     style.css           # Stylesheet for the dashboard
     table.js            # Frontend logic: filters, table rendering, UI helpers
 ```
+## Run with Docker
+
+```bash
+docker compose up -d --build
+
+# API: http://localhost:12081/
+# Health: http://localhost:12081/health
+```

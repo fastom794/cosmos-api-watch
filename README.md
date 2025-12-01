@@ -31,7 +31,7 @@ Try the live demo: **[cosmos-api-watch.ryzhaevsky.dev](https://cosmos-api-watch.
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript
 - **Deployment**: Docker & docker-compose
 
-## Project structure
+## 📂 Project structure
 ```
 ~/app.local/cosmos-api-watch/
 

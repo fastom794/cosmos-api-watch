@@ -381,3 +381,77 @@ projects:
             type: api
             url: https://api.kava.nodestake.org
             enabled: true
+
+  - slug: injective
+    name: Injective Protocol
+    networks:
+      - slug: injective-mainnet
+        name: Injective Mainnet
+        chain_id: injective-1
+        network_type: mainnet
+        endpoints:
+
+          - name: publicnode.com
+            type: rpc
+            url: https://injective-rpc.publicnode.com
+            enabled: true
+
+          - name: imperator.co
+            type: rpc
+            url: https://rpc-injective.imperator.co
+            enabled: true
+
+          - name: polkachu.com
+            type: rpc
+            url: https://injective-rpc.polkachu.com
+            enabled: true
+
+          - name: publicnode.com
+            type: api
+            url: https://injective-rest.publicnode.com
+            enabled: true
+
+          - name: polkachu.com
+            type: api
+            url: https://injective-api.polkachu.com
+            enabled: true
+
+  - slug: stride
+    name: Stride
+    networks:
+      - slug: stride-mainnet
+        name: Stride Mainnet
+        chain_id: stride-1
+        network_type: mainnet
+        endpoints:
+
+          - name: publicnode.com
+            type: rpc
+            url: https://stride-rpc.publicnode.com
+            enabled: true
+
+          - name: polkachu.com
+            type: rpc
+            url: https://stride-rpc.polkachu.com
+            enabled: true
+
+          - name: imperator.co
+            type: rpc
+            url: https://rpc-stride.imperator.co
+            enabled: true
+
+          - name: stakin-nodes.com
+            type: rpc
+            url: https://stride.rpc.stakin-nodes.com
+            enabled: true
+
+          - name: publicnode.com
+            type: api
+            url: https://stride-rest.publicnode.com
+            enabled: true
+
+          - name: polkachu.com
+            type: api
+            url: https://stride-api.polkachu.com
+            enabled: true
+

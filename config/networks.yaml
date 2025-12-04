@@ -455,3 +455,37 @@ projects:
             url: https://stride-api.polkachu.com
             enabled: true
 
+  - slug: axelar
+    name: Axelar
+    networks:
+      - slug: axelar-mainnet
+        name: Axelar Mainnet
+        chain_id: axelar-dojo-1
+        network_type: mainnet
+        endpoints:
+
+          - name: publicnode.com
+            type: rpc
+            url: https://axelar-rpc.publicnode.com
+            enabled: true
+
+          - name: polkachu.com
+            type: rpc
+            url: https://axelar-rpc.polkachu.com
+            enabled: true
+
+          - name: imperator.co
+            type: rpc
+            url: https://rpc-axelar.imperator.co
+            enabled: true
+
+          - name: publicnode.com
+            type: api
+            url: https://axelar-rest.publicnode.com
+            enabled: true
+
+          - name: polkachu.com
+            type: api
+            url: https://axelar-api.polkachu.com
+            enabled: true
+

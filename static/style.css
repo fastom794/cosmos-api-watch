@@ -76,7 +76,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     font-size: 13px;
-    table-layout: fixed;
+    table-layout: auto;
 }
 
 th, td {

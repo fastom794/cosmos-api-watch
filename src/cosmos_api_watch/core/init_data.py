@@ -6,8 +6,8 @@ import logging
 import yaml
 from sqlalchemy.orm import Session
 
-from db.session import SessionLocal
-from models import Project, Network, Endpoint
+from cosmos_api_watch.db.session import SessionLocal
+from cosmos_api_watch.models import Project, Network, Endpoint
 
 logger = logging.getLogger(__name__)
 

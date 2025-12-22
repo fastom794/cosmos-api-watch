@@ -2,7 +2,7 @@
 from datetime import datetime
 from sqlalchemy import Column, Integer, String, Boolean, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
-from db.session import Base
+from cosmos_api_watch.db.session import Base
 
 
 class Endpoint(Base):

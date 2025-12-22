@@ -58,3 +58,6 @@ certs/
 # Docker
 docker-data/
 docker-volumes/
+
+# Tests
+.coverage

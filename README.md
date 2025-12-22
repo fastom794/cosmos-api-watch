@@ -33,49 +33,50 @@ Try the live demo: **[cosmos-api-watch.ryzhaevsky.dev](https://cosmos-api-watch.
 
 ## 📂 Project structure
 ```
-~/app.local/cosmos-api-watch/
+  docker-compose.yml      # Docker services: API, Worker, PostgreSQL
+  Dockerfile              # Build instructions for the FastAPI application container
+  pyproject.toml          # Python dependencies and project configuration
+  poetry.lock             # Poetry lock file with exact versions of all dependencies
+  .env                    # Environment variables (DB credentials, config paths, etc.)
 
-  docker-compose.yml    # Docker services: API, Worker, PostgreSQL
-  Dockerfile            # Build instructions for the FastAPI application container
-  requirements.txt      # Python dependencies for API and Worker
-  .env                  # Environment variables (DB credentials, config paths, etc.)
+  src/cosmos_api_watch
 
-  config/               # External configuration files
-    networks.yaml       # List of projects, networks and endpoints to load into the database
+    config/               # External configuration files
+      networks.yaml       # List of projects, networks and endpoints to load into the database
 
-  api/
-    __init__.py         # Package initializer
-    routes.py           # FastAPI application and HTTP endpoints
-    deps.py             # Shared dependencies (e.g., get_db session provider)
+    api/
+      __init__.py         # Package initializer
+      routes.py           # FastAPI application and HTTP endpoints
+      deps.py             # Shared dependencies (e.g., get_db session provider)
 
-  core/
-    __init__.py         # Package initializer
-    config.py           # Application configuration (DATABASE_URL, settings)
-    init_data.py        # Loads and synchronizes networks.yaml into the database
+    core/
+      __init__.py         # Package initializer
+      config.py           # Application configuration (DATABASE_URL, settings)
+      init_data.py        # Loads and synchronizes networks.yaml into the database
 
-  db/
-    __init__.py         # Package initializer
-    session.py          # Database engine, SessionLocal factory, declarative Base
+    db/
+      __init__.py         # Package initializer
+      session.py          # Database engine, SessionLocal factory, declarative Base
 
-  models/               # SQLAlchemy ORM model definitions
-    __init__.py         # Package initializer
-    project.py          # Project model (e.g., cosmos, osmosis)
-    network.py          # Network model (chain_id, mainnet/testnet)
-    endpoint.py         # Endpoint model (RPC/API URLs)
-    check.py            # Historical check records (per request)
-    endpoint_status.py  # Last known status for each endpoint
+    models/               # SQLAlchemy ORM model definitions
+      __init__.py         # Package initializer
+      project.py          # Project model (e.g., cosmos, osmosis)
+      network.py          # Network model (chain_id, mainnet/testnet)
+      endpoint.py         # Endpoint model (RPC/API URLs)
+      check.py            # Historical check records (per request)
+      endpoint_status.py  # Last known status for each endpoint
 
-  worker/
-    __init__.py         # Package initializer
-    runner.py           # Worker entry point; scheduler loop for periodic checks
-    checker.py          # RPC/API request logic, block height/time parsing
+    worker/
+      __init__.py         # Package initializer
+      runner.py           # Worker entry point; scheduler loop for periodic checks
+      checker.py          # RPC/API request logic, block height/time parsing
 
-  templates/
-    index.html          # HTML dashboard rendered by FastAPI
+    templates/
+      index.html          # HTML dashboard rendered by FastAPI
 
-  static/
-    style.css           # Stylesheet for the dashboard
-    table.js            # Frontend logic: filters, table rendering, UI helpers
+    static/
+      style.css           # Stylesheet for the dashboard
+      table.js            # Frontend logic: filters, table rendering, UI helpers
 ```
 ## 🚀 Quick Start
 
@@ -87,7 +88,7 @@ git clone https://github.com/fastom794/cosmos-api-watch.git
 cd cosmos-api-watch
 
 # Copy environment file
-cp env.example .env
+cp .env.example .env
 
 # Start all services
 docker compose up -d --build
@@ -103,13 +104,23 @@ docker compose up -d --build
 # Clone and setup
 git clone https://github.com/fastom794/cosmos-api-watch.git
 cd cosmos-api-watch
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
 
-# Setup PostgreSQL database
-# Then run:
-uvicorn api.routes:app --reload
+# Install poetry if not installed
+pip install poetry
+
+# Install dependencies
+poetry install
+
+# Setup PostgreSQL database or run witch docker compose:
+docker compose up db -d
+
+# Copy environment file
+cp .env.example .env
+
+# Start API:
+poetry run uvicorn cosmos_api_watch.api.routes:app --host 0.0.0.0 --port 12081
+# Start Worker:
+poetry run python -m cosmos_api_watch.worker.runner
 
 # Access at: http://localhost:8000
 ```
@@ -141,7 +152,7 @@ Once running, visit:
 
 ### Adding New Networks
 
-Edit `config/networks.yaml` to add new projects, networks, or endpoints:
+Edit `src/cosmos_api_watch/config/networks.yaml` to add new projects, networks, or endpoints:
 
 ```yaml
 projects:

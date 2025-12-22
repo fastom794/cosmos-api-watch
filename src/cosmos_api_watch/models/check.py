@@ -4,7 +4,7 @@ from datetime import datetime
 from sqlalchemy import Column, Integer, Boolean, ForeignKey, DateTime, String
 from sqlalchemy.orm import relationship
 
-from db.session import Base
+from cosmos_api_watch.db.session import Base
 
 
 class Check(Base):

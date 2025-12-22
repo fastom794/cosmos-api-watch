@@ -6,9 +6,9 @@ import logging
 from datetime import datetime, timezone
 from sqlalchemy.orm import Session
 
-from db.session import SessionLocal
-from models import Endpoint, Network, Check, EndpointStatus
-from worker.checker import check_rpc_endpoint, check_api_endpoint
+from cosmos_api_watch.db.session import SessionLocal
+from cosmos_api_watch.models import Endpoint, Network, Check, EndpointStatus
+from cosmos_api_watch.worker.checker import check_rpc_endpoint, check_api_endpoint
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("worker")
